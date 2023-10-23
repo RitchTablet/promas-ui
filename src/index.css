@@ -7,13 +7,29 @@
     @apply px-40;
 }
 
-body {
-    background-color: aliceblue;
+.input_post {
+    @apply appearance-none rounded w-full py-2 px-3 bg-transparent text-gray-900 focus:outline-none
 }
 
-.texto-recortado {
-    white-space: nowrap; /* Evita que el texto se divida en múltiples líneas */
-    overflow: hidden; /* Oculta el texto que se desborda del contenedor */
-    text-overflow: ellipsis; /* Muestra puntos suspensivos (...) para indicar que el texto ha sido truncado */
-    max-width: 70ch; /* Establece el ancho máximo del texto a 70 caracteres */
+body {
+    background-color: #FBFFFF;
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+    height: 8px;
+    background-color: #ccc;
+    border-radius: 30px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #aaa;
+    border-radius: 30px;
+}
+
+.cropped-text {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 70ch;
 }
