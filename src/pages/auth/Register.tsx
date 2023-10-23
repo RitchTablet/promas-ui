@@ -88,6 +88,7 @@ const Register = () => {
                 />
                 <TextField id="outlined-basic" label="Password" variant="outlined"
                     fullWidth
+                    type="password"
                     value={password}
                     onChange={(e) => setPassword(e.target.value)}
                     InputProps={{
@@ -102,8 +103,9 @@ const Register = () => {
                 />
                 <TextField id="outlined-basic" label="Confirm Password" variant="outlined"
                     fullWidth
-                    value={password}
-                    onChange={(e) => setPassword(e.target.value)}
+                    type="password"
+                    value={confirmPassword}
+                    onChange={(e) => setConfirmPassword(e.target.value)}
                     InputProps={{
                         startAdornment: (
                             <InputAdornment position="start">

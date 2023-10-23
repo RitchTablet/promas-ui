@@ -8,6 +8,7 @@ import { useNavigate } from "react-router-dom";
 import { EditNote, Logout } from "@mui/icons-material";
 import { AuthService } from "../../services/auth.service";
 import SearchMenu from "../menus/search.menu";
+import { TOKEN } from "../../util/constants";
 
 const Navbar = () => {
     const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
@@ -78,6 +79,8 @@ const Navbar = () => {
 
     const onLogout =()=> {
         handleMenuClose();
+        localStorage.removeItem(TOKEN);
+        navigate('/auth/login')
     }
 
     return (

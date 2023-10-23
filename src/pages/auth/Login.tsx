@@ -14,7 +14,11 @@ const Login = () => {
     const onLogin = async ()=> {
         const isLoggin = await authService.login(username, password);
         if(isLoggin)
-            navigate('../../home');
+            navigate('/home');
+    }
+
+    const onGotoRegister = ()=> {
+        navigate('/auth/register');
     }
 
     return (
@@ -67,8 +71,8 @@ const Login = () => {
                     ),
                 }}
                 />
-                <div className="flex flex-col gap-3">
-                    <div className="cursor-pointer text-gray-400 font-medium border-b pb-1">¿Olvidaste la contraseña?</div>
+                <div className="flex flex-col gap-3 items-center justify-center">
+                    <div className="cursor-pointer text-gray-400 font-medium border-b pb-1" onClick={onGotoRegister}>Registrate!</div>
                     <button type="button" className="bg-[#4C7FD0] px-8 py-2 w-48 rounded-2xl text-white shadow-xl" onClick={onLogin}>Ingresar</button>
                 </div>
             </form>

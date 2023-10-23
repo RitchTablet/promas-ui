@@ -36,13 +36,21 @@ export class AuthService {
     }
 
     getUsernameByDecodeJWT() {
-        const token = this.getAccessToken();
-        const {username} = jwtDecode(token) as any;
-        return username;
+        try {
+            const token = this.getAccessToken();
+            const {username} = jwtDecode(token) as any;
+            return username;
+        } catch (error) {
+            console.log(error);
+        }
     }
 
     getUserByDecodeJWT() {
-        const token = this.getAccessToken();
-        return jwtDecode(token) as IUser;
+        try {
+            const token = this.getAccessToken();
+            return jwtDecode(token) as IUser;
+        } catch (error) {
+            console.log(error);
+        }
     }
 }
