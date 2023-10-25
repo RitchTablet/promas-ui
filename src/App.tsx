@@ -7,6 +7,9 @@ import Login from "./pages/auth/Login";
 import AuthLayout from "./layouts/AuthLayout";
 import Register from "./pages/auth/Register";
 
+import 'react-toastify/dist/ReactToastify.css';
+import { ToastContainer } from 'react-toastify';
+
 import {
   QueryClient,
   QueryClientProvider,
@@ -37,6 +40,7 @@ function App() {
         </Routes>
       </BrowserRouter>
       {/* <LoadingSpinner/> */}
+      <ToastContainer/>
     </QueryClientProvider>
   );
 }

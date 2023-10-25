@@ -136,7 +136,7 @@ const Navbar = () => {
                         <Avatar alt="Remy Sharp" src={user.profileImageUrl} sx={{ width: 70, height: 70 }}>
                             {user?.fullName?.substring(0,2)}
                         </Avatar>
-                        <div className="text-lg font-medium">{user?.fullName}</div>
+                        <div className="text-lg font-medium text-center">{user?.fullName}</div>
                         <div className="text-base text-slate-400">@{user?.username}</div>
                     </div>
                     <Divider />
@@ -144,7 +144,7 @@ const Navbar = () => {
                         <ListItemIcon>
                             <EditNote fontSize="small" />
                         </ListItemIcon>
-                        <ListItemText>Write</ListItemText>
+                        <ListItemText>Escribir Post</ListItemText>
                     </MenuItem>
                     <Divider />
                     <MenuItem onClick={onLogout}>
